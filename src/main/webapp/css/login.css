@@ -1,0 +1,11 @@
+body{
+    background: url("../images/backgroundPic.jpg");
+    background-size: 100%;
+    margin-top: 250px;
+    background-position: center;
+    height: 550px;
+}
+
+.panel-title{
+    text-align: center;
+}
