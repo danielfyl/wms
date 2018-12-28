@@ -1,10 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="../css/mainPage.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/mainPage.css"/>
 </head>
 <body>
 
@@ -157,7 +159,7 @@
     </div>
 
 
-<script src="../js/jquery-2.2.3.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery-2.2.3.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
 </body>
 </html>

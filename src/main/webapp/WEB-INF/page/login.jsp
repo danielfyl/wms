@@ -1,10 +1,11 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" href="../../css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="../../css/login.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/login.css"/>
 </head>
 <body>
 <!--定义容器-->
