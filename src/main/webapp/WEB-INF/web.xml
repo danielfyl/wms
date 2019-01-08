@@ -5,6 +5,11 @@
          id="WebApp_ID" version="3.1">
     <display-name>WMS</display-name>
 
+    <!--配置欢迎页-->
+    <welcome-file-list>
+        <welcome-file>index</welcome-file>
+    </welcome-file-list>
+
     <!-- ==================================================
             Spring MVC springDispatcherServlet 配置
          ==================================================-->
@@ -17,6 +22,10 @@
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
+    <servlet-mapping>
+        <servlet-name>springDispatcherServlet</servlet-name>
+        <url-pattern>/index</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>springDispatcherServlet</servlet-name>
         <url-pattern>/</url-pattern>

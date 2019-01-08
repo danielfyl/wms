@@ -122,13 +122,13 @@
 
 
                    var data = {
-                       "id" : userID,
+                       "userID" : userID,
                        "password" :  password
                    };
 
                    $.ajax({
                         type:"POST",
-                        URL:"account/login",
+                        url:"login",
                         dataType:"json",
                         contentType:"application/json",
                         data:JSON.stringify(data),
