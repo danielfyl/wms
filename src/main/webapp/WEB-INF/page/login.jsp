@@ -37,7 +37,7 @@
                             <label class="control-label col-md-4">用户ID:</label>
 
                             <div class="col-md-7">
-                                <input class="form-control" type="text" placeholder="用户ID" name="userID"/>
+                                <input class="form-control" id="useID" type="text" placeholder="用户ID" name="userID"/>
                             </div>
 
                         </div>
@@ -47,7 +47,7 @@
                             <label class="control-label col-md-4">密码:</label>
 
                             <div class="col-md-7">
-                                <input class="form-control" type="password" placeholder="密码" name="password"/>
+                                <input class="form-control" id="password" type="password" placeholder="密码" name="password"/>
                             </div>
 
                         </div>
@@ -107,6 +107,36 @@
                    }
                }
            })
+               .on("success.form.bv",function(e){
+                   //阻止表单默认行为
+                   e.preventDefault();
+
+                   //获取form实例
+                   var $form = $(e.target);
+                   //获取bv实例
+                   var bv = $form.data('bootstrapValidator');
+
+                   //发送数据到后端验证
+                   var userID = $("#useID").val();
+                   var password = $("#password").val();
+
+
+                   var data = {
+                       "id" : userID,
+                       "password" :  password
+                   };
+
+                   $.ajax({
+                        type:"POST",
+                        URL:"account/login",
+                        dataType:"json",
+                        contentType:"application/json",
+                        data:JSON.stringify(data),
+                        success:function (response) {
+
+                        }
+                   });
+               });
         });
     </script>
 </div>
